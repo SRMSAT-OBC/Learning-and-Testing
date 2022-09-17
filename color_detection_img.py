@@ -1,8 +1,8 @@
 import cv2
 import pandas as pd
 
-img_path = r'/home/somakg/PycharmProjects/Color_detection/pic.jpg'
 #edit image path
+img_path = r'/home/somakg/PycharmProjects/Color_detection/pic.jpg'
 img = cv2.imread(img_path)
 
 clicked = False
