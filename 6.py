@@ -13,5 +13,6 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 cv2.putText(img,'Haaruyi Here!',(10,500), font, 6, (200,255,155), 13, cv2.LINE_AA)
 
 cv2.imshow('+image',img)
+cv2.imwrite('new_plant.jpeg',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
