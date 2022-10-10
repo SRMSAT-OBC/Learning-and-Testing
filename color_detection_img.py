@@ -18,7 +18,7 @@ def get_color_name(R, G, B):
         d = abs(R - int(csv.loc[i, "R"])) + abs(G - int(csv.loc[i, "G"])) + abs(B - int(csv.loc[i, "B"]))
         if d <= minimum:
             minimum = d
-            cname = csv.loc[i, "color_name"]
+            cname = csv.loc[i, "color_name"] + "  " + csv.loc[i, "hex"]
     return cname
 
 
@@ -42,7 +42,7 @@ while True:
     cv2.imshow("image", img)
     if clicked:
 
-        cv2.rectangle(img, (20, 20), (375, 60), (b, g, r), -1)
+        cv2.rectangle(img, (20, 20), (475, 60), (b, g, r), -1)
 
         text = get_color_name(r, g, b)
 
